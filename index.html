@@ -999,25 +999,39 @@ function doSearch(){
     renderDrop(extHits,fdbHits,fsHits,false);
   },600);
 }
-function renderDrop(extH,fdbH,fsH,loading){
-  var drop=document.getElementById('drop'), h='';
-  if(extH.length||fdbH.length){
-    h+="<div style='font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--cin);padding:8px 14px 4px'>Your database</div>";
-    extH.forEach(function(fd,i){
-      var name=getFoodName(fd), star=fd.cat&&fd.cat.includes('★')?' ⭐':'';
-      h+="<div class='di' onclick='pickExtFood("+i+")'><div><div class='di-name'>"+name+star+"</div><div class='di-cat'>"+fd.cat+"</div></div><div class='di-m'>P"+fd.p+"g C"+fd.c+"g F"+fd.f+"g<br>"+fd.k+"kcal/100g</div></div>";
+function renderDrop(extH, fdbH, fsH, loading) {
+  var drop = document.getElementById('drop'), h = '';
+  if (extH.length || fdbH.length) {
+    h += "<div style='font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--cin);padding:8px 14px 4px'>Your database</div>";
+    
+    // The Fix: We are passing the specific name to pickLocalFood so it finds the right item
+    extH.forEach(function(fd) {
+      var name = getFoodName(fd);
+      var star = fd.cat && fd.cat.includes('★') ? ' ⭐' : '';
+      h += "<div class='di' onclick=\"pickLocalFood('" + name.replace(/'/g, "\\'") + "')\">" +
+           "<div><div class='di-name'>" + name + star + "</div><div class='di-cat'>" + fd.cat + "</div></div>" +
+           "<div class='di-m'>P" + fd.p + "g C" + fd.c + "g F" + fd.f + "g<br>" + fd.k + "kcal/100g</div></div>";
     });
-    fdbH.forEach(function(e){
-      var n=e[0],d=e[1],star=d.cat&&d.cat.includes('★')?' ⭐':'';
-      h+="<div class='di' onclick=\"pickLocalFood('"+n.replace(/'/g,"\\'")+"')\"><div><div class='di-name'>"+n+star+"</div><div class='di-cat'>"+d.cat+"</div></div><div class='di-m'>P"+d.p+"g C"+d.c+"g F"+d.f+"g<br>"+d.k+"kcal/100g</div></div>";
+
+    fdbH.forEach(function(e) {
+      var n = e[0], d = e[1], star = d.cat && d.cat.includes('★') ? ' ⭐' : '';
+      h += "<div class='di' onclick=\"pickLocalFood('" + n.replace(/'/g, "\\'") + "')\">" +
+           "<div><div class='di-name'>" + n + star + "</div><div class='di-cat'>" + d.cat + "</div></div>" +
+           "<div class='di-m'>P" + d.p + "g C" + d.c + "g F" + d.f + "g<br>" + d.k + "kcal/100g</div></div>";
     });
   }
-  if(loading){ h+="<div style='font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);padding:8px 14px 4px'>Searching FatSecret...</div><div style='padding:8px 14px;font-size:12px;color:var(--mut);font-style:italic'>Loading...</div>"; }
-  else if(fsH.length){
-    h+="<div style='font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);padding:8px 14px 4px'>FatSecret database</div>";
-    fsH.forEach(function(fd,i){ h+="<div class='di' onclick='pickFSFood("+i+")'><div><div class='di-name'>"+fd.name+"</div><div class='di-cat'>"+fd.cat+"</div></div><div class='di-m'>P"+fd.p+"g C"+fd.c+"g F"+fd.f+"g<br>"+fd.k+"kcal/serve</div></div>"; });
+  if (loading) {
+    h += "<div style='font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);padding:8px 14px 4px'>Searching FatSecret...</div>" +
+         "<div style='padding:8px 14px;font-size:12px;color:var(--mut);font-style:italic'>Loading...</div>";
+  } else if (fsH.length) {
+    h += "<div style='font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);padding:8px 14px 4px'>FatSecret database</div>";
+    fsH.forEach(function(fd, i) {
+      h += "<div class='di' onclick='pickFSFood(" + i + ")'><div><div class='di-name'>" + fd.name + "</div><div class='di-cat'>" + fd.cat + "</div></div>" +
+           "<div class='di-m'>P" + fd.p + "g C" + fd.c + "g F" + fd.f + "g<br>" + fd.k + "kcal/serve</div></div>";
+    });
   }
-  if(h){ drop.innerHTML=h; drop.classList.add('open'); } else { drop.classList.remove('open'); }
+  if (h) { drop.innerHTML = h; drop.classList.add('open'); } else { drop.classList.remove('open'); }
+}
 }
 function pickExtFood(i){ var fd=EXT_DB[i]; if(!fd) return; var name=getFoodName(fd); selFood=name; localSelected=true; window._extPicked=fd; window._fsPicked=null; document.getElementById('srch').value=name; document.getElementById('drop').classList.remove('open'); document.getElementById('grams').focus(); }
 function pickLocalFood(n){ selFood=n; localSelected=true; window._extPicked=null; document.getElementById('srch').value=n; document.getElementById('drop').classList.remove('open'); document.getElementById('grams').focus(); }
