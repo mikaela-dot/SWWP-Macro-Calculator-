@@ -1,0 +1,1064 @@
+[
+  {
+    "nz": "Chicken breast",
+    "usa": "Chicken breast",
+    "p": 31,
+    "c": 0,
+    "f": 3.6,
+    "k": 165,
+    "cat": "Protein \u2605"
+  },
+  {
+    "nz": "Chicken thigh",
+    "usa": "Chicken thigh",
+    "p": 26,
+    "c": 0,
+    "f": 9,
+    "k": 177,
+    "cat": "Protein"
+  },
+  {
+    "nz": "Turkey breast",
+    "usa": "Turkey breast",
+    "p": 29,
+    "c": 0,
+    "f": 1,
+    "k": 135,
+    "cat": "Protein"
+  },
+  {
+    "nz": "Salmon fillet",
+    "usa": "Salmon fillet",
+    "p": 25,
+    "c": 0,
+    "f": 13,
+    "k": 208,
+    "cat": "Protein \u2014 omega-3 \u2605\u2605"
+  },
+  {
+    "nz": "Ocean trout",
+    "usa": "Rainbow trout",
+    "p": 24,
+    "c": 0,
+    "f": 11,
+    "k": 195,
+    "cat": "Protein \u2014 omega-3"
+  },
+  {
+    "nz": "Snapper",
+    "usa": "Red snapper",
+    "p": 22,
+    "c": 0,
+    "f": 1.5,
+    "k": 105,
+    "cat": "Protein \u2014 white fish \u2605"
+  },
+  {
+    "nz": "Tarakihi",
+    "usa": "Whiting",
+    "p": 21,
+    "c": 0,
+    "f": 1.2,
+    "k": 98,
+    "cat": "Protein \u2014 white fish \u2605"
+  },
+  {
+    "nz": "Barramundi",
+    "usa": "Sea bass",
+    "p": 22,
+    "c": 0,
+    "f": 2,
+    "k": 110,
+    "cat": "Protein \u2014 white fish"
+  },
+  {
+    "nz": "Gurnard",
+    "usa": "Gurnard",
+    "p": 21,
+    "c": 0,
+    "f": 1.1,
+    "k": 95,
+    "cat": "Protein \u2014 white fish \u2605"
+  },
+  {
+    "nz": "Blue cod",
+    "usa": "Cod",
+    "p": 20,
+    "c": 0,
+    "f": 1.2,
+    "k": 93,
+    "cat": "Protein \u2014 white fish"
+  },
+  {
+    "nz": "Smoked salmon",
+    "usa": "Smoked salmon",
+    "p": 25,
+    "c": 0,
+    "f": 12,
+    "k": 215,
+    "cat": "Protein \u2014 omega-3"
+  },
+  {
+    "nz": "Canned salmon",
+    "usa": "Canned salmon",
+    "p": 22,
+    "c": 0,
+    "f": 9,
+    "k": 172,
+    "cat": "Protein \u2014 omega-3"
+  },
+  {
+    "nz": "Tuna canned in water",
+    "usa": "Canned tuna in water",
+    "p": 25,
+    "c": 0,
+    "f": 1,
+    "k": 109,
+    "cat": "Protein \u2014 omega-3"
+  },
+  {
+    "nz": "Tempeh",
+    "usa": "Tempeh",
+    "p": 19,
+    "c": 9,
+    "f": 11,
+    "k": 193,
+    "cat": "Protein \u2014 fermented \u2605"
+  },
+  {
+    "nz": "Firm tofu",
+    "usa": "Firm tofu",
+    "p": 8,
+    "c": 2,
+    "f": 4.5,
+    "k": 76,
+    "cat": "Protein \u2014 plant"
+  },
+  {
+    "nz": "Lentils cooked",
+    "usa": "Lentils cooked",
+    "p": 9,
+    "c": 20,
+    "f": 0.4,
+    "k": 116,
+    "cat": "Protein + carb"
+  },
+  {
+    "nz": "Red lentils cooked",
+    "usa": "Red lentils cooked",
+    "p": 8.5,
+    "c": 19,
+    "f": 0.4,
+    "k": 111,
+    "cat": "Protein + carb"
+  },
+  {
+    "nz": "Chickpeas cooked",
+    "usa": "Chickpeas cooked",
+    "p": 9,
+    "c": 27,
+    "f": 3,
+    "k": 164,
+    "cat": "Protein + carb"
+  },
+  {
+    "nz": "Black beans cooked",
+    "usa": "Black beans cooked",
+    "p": 8.9,
+    "c": 24,
+    "f": 0.5,
+    "k": 132,
+    "cat": "Protein + carb"
+  },
+  {
+    "nz": "Cannellini beans",
+    "usa": "White beans",
+    "p": 9,
+    "c": 21,
+    "f": 0.5,
+    "k": 120,
+    "cat": "Protein + carb"
+  },
+  {
+    "nz": "Kidney beans",
+    "usa": "Kidney beans",
+    "p": 8.7,
+    "c": 22,
+    "f": 0.5,
+    "k": 127,
+    "cat": "Protein + carb"
+  },
+  {
+    "nz": "Adzuki beans cooked",
+    "usa": "Adzuki beans cooked",
+    "p": 7.5,
+    "c": 25,
+    "f": 0.1,
+    "k": 128,
+    "cat": "Protein + carb"
+  },
+  {
+    "nz": "Prawns cooked",
+    "usa": "Shrimp cooked",
+    "p": 24,
+    "c": 0,
+    "f": 1,
+    "k": 99,
+    "cat": "Protein \u2014 moderate purine"
+  },
+  {
+    "nz": "Duck breast",
+    "usa": "Duck breast",
+    "p": 19,
+    "c": 0,
+    "f": 8,
+    "k": 156,
+    "cat": "Protein"
+  },
+  {
+    "nz": "Faba bean protein",
+    "usa": "Faba bean protein",
+    "p": 80,
+    "c": 5,
+    "f": 2,
+    "k": 357,
+    "cat": "Protein powder \u2605\u2605"
+  },
+  {
+    "nz": "Pea protein powder",
+    "usa": "Pea protein powder",
+    "p": 80,
+    "c": 7,
+    "f": 2,
+    "k": 365,
+    "cat": "Protein powder"
+  },
+  {
+    "nz": "Collagen hydrolysate",
+    "usa": "Collagen peptides",
+    "p": 90,
+    "c": 0,
+    "f": 0,
+    "k": 360,
+    "cat": "Supplement \u2014 post workout"
+  },
+  {
+    "nz": "Shiitake mushrooms",
+    "usa": "Shiitake mushrooms",
+    "p": 2.2,
+    "c": 7,
+    "f": 0.5,
+    "k": 34,
+    "cat": "Protein anchor \u2014 hepatoprotective \u2605"
+  },
+  {
+    "nz": "King oyster mushrooms",
+    "usa": "King oyster mushrooms",
+    "p": 2.5,
+    "c": 6,
+    "f": 0.3,
+    "k": 35,
+    "cat": "Protein anchor"
+  },
+  {
+    "nz": "Portobello mushrooms",
+    "usa": "Portobello mushrooms",
+    "p": 2.6,
+    "c": 4.3,
+    "f": 0.4,
+    "k": 26,
+    "cat": "Protein anchor"
+  },
+  {
+    "nz": "Broccoli",
+    "usa": "Broccoli",
+    "p": 2.8,
+    "c": 7,
+    "f": 0.4,
+    "k": 34,
+    "cat": "Vegetable \u2014 cruciferous \u2605\u2605"
+  },
+  {
+    "nz": "Brussels sprouts",
+    "usa": "Brussels sprouts",
+    "p": 3.4,
+    "c": 9,
+    "f": 0.3,
+    "k": 43,
+    "cat": "Vegetable \u2014 cruciferous \u2605\u2605"
+  },
+  {
+    "nz": "Cauliflower",
+    "usa": "Cauliflower",
+    "p": 1.9,
+    "c": 5,
+    "f": 0.3,
+    "k": 25,
+    "cat": "Vegetable \u2014 cruciferous"
+  },
+  {
+    "nz": "Broccolini",
+    "usa": "Broccolini",
+    "p": 3.5,
+    "c": 6,
+    "f": 0.4,
+    "k": 35,
+    "cat": "Vegetable \u2014 cruciferous \u2605"
+  },
+  {
+    "nz": "Kale cooked",
+    "usa": "Kale cooked",
+    "p": 3,
+    "c": 9,
+    "f": 0.5,
+    "k": 43,
+    "cat": "Vegetable \u2014 always cook (TSH 3.5)"
+  },
+  {
+    "nz": "Spinach",
+    "usa": "Spinach",
+    "p": 2.9,
+    "c": 3.6,
+    "f": 0.4,
+    "k": 23,
+    "cat": "Vegetable \u2014 leafy"
+  },
+  {
+    "nz": "Capsicum red",
+    "usa": "Red bell pepper",
+    "p": 1,
+    "c": 6,
+    "f": 0.3,
+    "k": 31,
+    "cat": "Vegetable \u2014 vitamin C \u2605"
+  },
+  {
+    "nz": "Capsicum green",
+    "usa": "Green bell pepper",
+    "p": 0.9,
+    "c": 5,
+    "f": 0.2,
+    "k": 20,
+    "cat": "Vegetable"
+  },
+  {
+    "nz": "Capsicum yellow",
+    "usa": "Yellow bell pepper",
+    "p": 1,
+    "c": 6.3,
+    "f": 0.2,
+    "k": 27,
+    "cat": "Vegetable \u2014 vitamin C"
+  },
+  {
+    "nz": "Asparagus",
+    "usa": "Asparagus",
+    "p": 2.2,
+    "c": 3.9,
+    "f": 0.2,
+    "k": 20,
+    "cat": "Vegetable \u2014 liver \u2605"
+  },
+  {
+    "nz": "Zucchini",
+    "usa": "Zucchini",
+    "p": 1.2,
+    "c": 3.1,
+    "f": 0.3,
+    "k": 17,
+    "cat": "Vegetable"
+  },
+  {
+    "nz": "Artichoke cooked",
+    "usa": "Artichoke cooked",
+    "p": 3.5,
+    "c": 11,
+    "f": 0.2,
+    "k": 53,
+    "cat": "Vegetable \u2014 liver + bile \u2605"
+  },
+  {
+    "nz": "Beetroot cooked",
+    "usa": "Beets cooked",
+    "p": 1.7,
+    "c": 10,
+    "f": 0.1,
+    "k": 44,
+    "cat": "Vegetable \u2014 methylation"
+  },
+  {
+    "nz": "Avocado",
+    "usa": "Avocado",
+    "p": 2,
+    "c": 9,
+    "f": 15,
+    "k": 160,
+    "cat": "Fat \u2014 monounsaturated \u2605"
+  },
+  {
+    "nz": "Carrot",
+    "usa": "Carrot",
+    "p": 0.9,
+    "c": 10,
+    "f": 0.2,
+    "k": 41,
+    "cat": "Vegetable \u2014 dinner carb"
+  },
+  {
+    "nz": "Parsnip cooked",
+    "usa": "Parsnip cooked",
+    "p": 1.4,
+    "c": 17,
+    "f": 0.3,
+    "k": 71,
+    "cat": "Vegetable \u2014 dinner carb"
+  },
+  {
+    "nz": "Fennel",
+    "usa": "Fennel",
+    "p": 1.2,
+    "c": 7,
+    "f": 0.2,
+    "k": 31,
+    "cat": "Vegetable \u2014 digestive support"
+  },
+  {
+    "nz": "Leek",
+    "usa": "Leek",
+    "p": 1.5,
+    "c": 14,
+    "f": 0.3,
+    "k": 61,
+    "cat": "Vegetable"
+  },
+  {
+    "nz": "Celery",
+    "usa": "Celery",
+    "p": 0.7,
+    "c": 3,
+    "f": 0.2,
+    "k": 16,
+    "cat": "Vegetable \u2014 hydrating"
+  },
+  {
+    "nz": "Cucumber",
+    "usa": "Cucumber",
+    "p": 0.65,
+    "c": 3.6,
+    "f": 0.11,
+    "k": 16,
+    "cat": "Vegetable \u2014 hydrating"
+  },
+  {
+    "nz": "Eggplant",
+    "usa": "Eggplant",
+    "p": 1,
+    "c": 6,
+    "f": 0.2,
+    "k": 25,
+    "cat": "Vegetable"
+  },
+  {
+    "nz": "Tomato",
+    "usa": "Tomato",
+    "p": 0.9,
+    "c": 3.9,
+    "f": 0.2,
+    "k": 18,
+    "cat": "Vegetable"
+  },
+  {
+    "nz": "Cherry tomatoes",
+    "usa": "Cherry tomatoes",
+    "p": 0.9,
+    "c": 4,
+    "f": 0.2,
+    "k": 18,
+    "cat": "Vegetable"
+  },
+  {
+    "nz": "Green beans",
+    "usa": "Green beans",
+    "p": 1.8,
+    "c": 7,
+    "f": 0.1,
+    "k": 31,
+    "cat": "Vegetable"
+  },
+  {
+    "nz": "Rocket",
+    "usa": "Arugula",
+    "p": 2.6,
+    "c": 3.7,
+    "f": 0.7,
+    "k": 25,
+    "cat": "Vegetable \u2014 liver support"
+  },
+  {
+    "nz": "Watercress",
+    "usa": "Watercress",
+    "p": 2.3,
+    "c": 1.3,
+    "f": 0.1,
+    "k": 11,
+    "cat": "Vegetable \u2014 liver detox \u2605"
+  },
+  {
+    "nz": "Silverbeet",
+    "usa": "Swiss chard",
+    "p": 1.9,
+    "c": 3.6,
+    "f": 0.1,
+    "k": 19,
+    "cat": "Vegetable \u2014 leafy"
+  },
+  {
+    "nz": "Bok choy",
+    "usa": "Bok choy",
+    "p": 1.5,
+    "c": 2.2,
+    "f": 0.2,
+    "k": 13,
+    "cat": "Vegetable \u2014 leafy"
+  },
+  {
+    "nz": "Sauerkraut",
+    "usa": "Sauerkraut",
+    "p": 0.9,
+    "c": 4,
+    "f": 0.1,
+    "k": 19,
+    "cat": "Fermented \u2014 gut \u2605"
+  },
+  {
+    "nz": "Kimchi",
+    "usa": "Kimchi",
+    "p": 2,
+    "c": 4,
+    "f": 0.5,
+    "k": 23,
+    "cat": "Fermented \u2014 gut health \u2605"
+  },
+  {
+    "nz": "Pumpkin",
+    "usa": "Butternut squash",
+    "p": 1,
+    "c": 7,
+    "f": 0.1,
+    "k": 26,
+    "cat": "Vegetable"
+  },
+  {
+    "nz": "Kumara",
+    "usa": "Sweet potato",
+    "p": 1.6,
+    "c": 20,
+    "f": 0.1,
+    "k": 86,
+    "cat": "Vegetable \u2014 post-exercise only"
+  },
+  {
+    "nz": "Button mushrooms",
+    "usa": "White mushrooms",
+    "p": 3.1,
+    "c": 3.3,
+    "f": 0.3,
+    "k": 22,
+    "cat": "Vegetable"
+  },
+  {
+    "nz": "Red cabbage",
+    "usa": "Red cabbage",
+    "p": 1.4,
+    "c": 7,
+    "f": 0.1,
+    "k": 31,
+    "cat": "Vegetable \u2014 antioxidant"
+  },
+  {
+    "nz": "Tart cherries",
+    "usa": "Tart cherries",
+    "p": 1,
+    "c": 16,
+    "f": 0.3,
+    "k": 63,
+    "cat": "Fruit \u2014 uricosuric \u2605\u2605"
+  },
+  {
+    "nz": "Blueberries",
+    "usa": "Blueberries",
+    "p": 0.7,
+    "c": 14,
+    "f": 0.3,
+    "k": 57,
+    "cat": "Fruit \u2014 priority \u2605"
+  },
+  {
+    "nz": "Raspberries",
+    "usa": "Raspberries",
+    "p": 1.2,
+    "c": 12,
+    "f": 0.7,
+    "k": 52,
+    "cat": "Fruit \u2014 high fibre"
+  },
+  {
+    "nz": "Strawberries",
+    "usa": "Strawberries",
+    "p": 0.8,
+    "c": 8,
+    "f": 0.3,
+    "k": 33,
+    "cat": "Fruit \u2014 vitamin C"
+  },
+  {
+    "nz": "Blackberries",
+    "usa": "Blackberries",
+    "p": 1.4,
+    "c": 10,
+    "f": 0.5,
+    "k": 43,
+    "cat": "Fruit \u2014 antioxidant"
+  },
+  {
+    "nz": "Apple",
+    "usa": "Apple",
+    "p": 0.3,
+    "c": 14,
+    "f": 0.2,
+    "k": 52,
+    "cat": "Fruit \u2014 pectin \u2605"
+  },
+  {
+    "nz": "Pear",
+    "usa": "Pear",
+    "p": 0.4,
+    "c": 15,
+    "f": 0.1,
+    "k": 57,
+    "cat": "Fruit \u2014 low fructose"
+  },
+  {
+    "nz": "Kiwifruit",
+    "usa": "Kiwi",
+    "p": 1.1,
+    "c": 15,
+    "f": 0.5,
+    "k": 61,
+    "cat": "Fruit \u2014 vitamin C \u2605"
+  },
+  {
+    "nz": "Feijoa",
+    "usa": "Feijoa",
+    "p": 1.1,
+    "c": 13,
+    "f": 0.4,
+    "k": 55,
+    "cat": "Fruit \u2014 NZ seasonal"
+  },
+  {
+    "nz": "Peach",
+    "usa": "Peach",
+    "p": 0.9,
+    "c": 10,
+    "f": 0.3,
+    "k": 39,
+    "cat": "Fruit \u2014 seasonal"
+  },
+  {
+    "nz": "Nectarine",
+    "usa": "Nectarine",
+    "p": 1.1,
+    "c": 11,
+    "f": 0.3,
+    "k": 44,
+    "cat": "Fruit \u2014 seasonal"
+  },
+  {
+    "nz": "Apricot fresh",
+    "usa": "Apricot fresh",
+    "p": 1.4,
+    "c": 11,
+    "f": 0.4,
+    "k": 48,
+    "cat": "Fruit \u2014 seasonal"
+  },
+  {
+    "nz": "Lemon",
+    "usa": "Lemon",
+    "p": 1.1,
+    "c": 9,
+    "f": 0.3,
+    "k": 29,
+    "cat": "Fruit \u2014 liver support \u2605"
+  },
+  {
+    "nz": "Lime",
+    "usa": "Lime",
+    "p": 0.7,
+    "c": 11,
+    "f": 0.2,
+    "k": 30,
+    "cat": "Fruit \u2014 liver support"
+  },
+  {
+    "nz": "Quinoa cooked",
+    "usa": "Quinoa cooked",
+    "p": 4.4,
+    "c": 22,
+    "f": 1.9,
+    "k": 120,
+    "cat": "Grain \u2014 GF complete protein \u2605"
+  },
+  {
+    "nz": "Buckwheat cooked",
+    "usa": "Buckwheat cooked",
+    "p": 3.4,
+    "c": 20,
+    "f": 0.6,
+    "k": 92,
+    "cat": "Grain \u2014 GF"
+  },
+  {
+    "nz": "Brown rice cooked",
+    "usa": "Brown rice cooked",
+    "p": 2.6,
+    "c": 23,
+    "f": 0.9,
+    "k": 111,
+    "cat": "Grain \u2014 GF"
+  },
+  {
+    "nz": "White rice cooked",
+    "usa": "White rice cooked",
+    "p": 2.7,
+    "c": 28,
+    "f": 0.3,
+    "k": 130,
+    "cat": "Grain \u2014 GF"
+  },
+  {
+    "nz": "GF oats cooked",
+    "usa": "GF oatmeal cooked",
+    "p": 2.5,
+    "c": 12,
+    "f": 1.4,
+    "k": 71,
+    "cat": "Grain \u2014 GF morning only"
+  },
+  {
+    "nz": "Millet cooked",
+    "usa": "Millet cooked",
+    "p": 3.5,
+    "c": 23,
+    "f": 1,
+    "k": 119,
+    "cat": "Grain \u2014 GF"
+  },
+  {
+    "nz": "Extra virgin olive oil",
+    "usa": "Extra virgin olive oil",
+    "p": 0,
+    "c": 0,
+    "f": 100,
+    "k": 884,
+    "cat": "Fat \u2014 primary cooking fat \u2605"
+  },
+  {
+    "nz": "Macadamia oil",
+    "usa": "Macadamia nut oil",
+    "p": 0,
+    "c": 0,
+    "f": 100,
+    "k": 884,
+    "cat": "Fat \u2014 cooking oil \u2605 most heat-stable"
+  },
+  {
+    "nz": "Avocado oil",
+    "usa": "Avocado oil",
+    "p": 0,
+    "c": 0,
+    "f": 100,
+    "k": 884,
+    "cat": "Fat \u2014 cooking oil, high smoke point"
+  },
+  {
+    "nz": "Coconut oil",
+    "usa": "Coconut oil",
+    "p": 0,
+    "c": 0,
+    "f": 100,
+    "k": 884,
+    "cat": "Fat \u2014 small amounts"
+  },
+  {
+    "nz": "Sesame oil",
+    "usa": "Sesame oil",
+    "p": 0,
+    "c": 0,
+    "f": 100,
+    "k": 884,
+    "cat": "Fat \u2014 flavour only"
+  },
+  {
+    "nz": "Ghee",
+    "usa": "Ghee",
+    "p": 0,
+    "c": 0,
+    "f": 100,
+    "k": 884,
+    "cat": "Fat \u2014 clarified butter"
+  },
+  {
+    "nz": "Walnuts",
+    "usa": "Walnuts",
+    "p": 15,
+    "c": 14,
+    "f": 65,
+    "k": 654,
+    "cat": "Fat \u2014 omega-3, uricosuric \u2605"
+  },
+  {
+    "nz": "Almonds",
+    "usa": "Almonds",
+    "p": 21,
+    "c": 22,
+    "f": 50,
+    "k": 579,
+    "cat": "Fat \u2014 magnesium, calcium"
+  },
+  {
+    "nz": "Macadamia nuts",
+    "usa": "Macadamia nuts",
+    "p": 7.9,
+    "c": 14,
+    "f": 76,
+    "k": 718,
+    "cat": "Fat \u2014 low omega-6 \u2605"
+  },
+  {
+    "nz": "Brazil nuts",
+    "usa": "Brazil nuts",
+    "p": 14,
+    "c": 12,
+    "f": 66,
+    "k": 659,
+    "cat": "Fat \u2014 selenium \u2605"
+  },
+  {
+    "nz": "Pumpkin seeds",
+    "usa": "Pumpkin seeds",
+    "p": 19,
+    "c": 18,
+    "f": 19,
+    "k": 327,
+    "cat": "Fat \u2014 zinc, magnesium \u2605"
+  },
+  {
+    "nz": "Ground flaxseed",
+    "usa": "Ground flaxseed",
+    "p": 18,
+    "c": 29,
+    "f": 42,
+    "k": 534,
+    "cat": "Fat \u2014 omega-3 ALA \u2605"
+  },
+  {
+    "nz": "Chia seeds",
+    "usa": "Chia seeds",
+    "p": 17,
+    "c": 42,
+    "f": 31,
+    "k": 486,
+    "cat": "Fat \u2014 omega-3, fibre"
+  },
+  {
+    "nz": "Hemp seeds",
+    "usa": "Hemp seeds",
+    "p": 32,
+    "c": 9,
+    "f": 49,
+    "k": 553,
+    "cat": "Fat \u2014 omega-3, zinc"
+  },
+  {
+    "nz": "Tahini",
+    "usa": "Tahini",
+    "p": 17,
+    "c": 23,
+    "f": 54,
+    "k": 595,
+    "cat": "Fat \u2014 calcium source \u2605"
+  },
+  {
+    "nz": "Sunflower seeds",
+    "usa": "Sunflower seeds",
+    "p": 21,
+    "c": 20,
+    "f": 51,
+    "k": 584,
+    "cat": "Fat \u2014 adrenal support"
+  },
+  {
+    "nz": "Dark chocolate 85%",
+    "usa": "Dark chocolate 85%",
+    "p": 7.7,
+    "c": 22,
+    "f": 43,
+    "k": 501,
+    "cat": "Fat \u2014 magnesium, small serve"
+  },
+  {
+    "nz": "Apple cider vinegar",
+    "usa": "Apple cider vinegar",
+    "p": 0,
+    "c": 0.6,
+    "f": 0,
+    "k": 3,
+    "cat": "Flavour \u2014 liver support \u2605"
+  },
+  {
+    "nz": "Tamari GF",
+    "usa": "Tamari GF",
+    "p": 10,
+    "c": 5.6,
+    "f": 0.1,
+    "k": 60,
+    "cat": "Flavour \u2014 GF soy sauce"
+  },
+  {
+    "nz": "Coconut aminos",
+    "usa": "Coconut aminos",
+    "p": 1,
+    "c": 14,
+    "f": 0,
+    "k": 60,
+    "cat": "Flavour \u2014 soy-free"
+  },
+  {
+    "nz": "Nutritional yeast",
+    "usa": "Nutritional yeast",
+    "p": 50,
+    "c": 25,
+    "f": 3,
+    "k": 325,
+    "cat": "Flavour \u2014 B12 \u2605"
+  },
+  {
+    "nz": "Miso paste",
+    "usa": "Miso paste",
+    "p": 12,
+    "c": 25,
+    "f": 3,
+    "k": 159,
+    "cat": "Fermented \u2014 small amounts"
+  },
+  {
+    "nz": "Bone broth",
+    "usa": "Bone broth",
+    "p": 4,
+    "c": 0.5,
+    "f": 0.5,
+    "k": 20,
+    "cat": "Supplement \u2014 collagen, gut"
+  },
+  {
+    "nz": "Turmeric powder",
+    "usa": "Turmeric powder",
+    "p": 9.7,
+    "c": 65,
+    "f": 3.3,
+    "k": 354,
+    "cat": "Spice \u2014 anti-inflammatory \u2605\u2605"
+  },
+  {
+    "nz": "Cinnamon ground",
+    "usa": "Cinnamon ground",
+    "p": 4,
+    "c": 81,
+    "f": 1.2,
+    "k": 247,
+    "cat": "Spice \u2014 blood sugar"
+  },
+  {
+    "nz": "Lemon juice",
+    "usa": "Lemon juice",
+    "p": 0.4,
+    "c": 6.9,
+    "f": 0.2,
+    "k": 22,
+    "cat": "Flavour \u2014 liver support"
+  },
+  {
+    "nz": "Almond milk unsweetened",
+    "usa": "Almond milk unsweetened",
+    "p": 0.5,
+    "c": 0.5,
+    "f": 1.1,
+    "k": 13,
+    "cat": "Drink \u2014 dairy-free"
+  },
+  {
+    "nz": "Oat milk",
+    "usa": "Oat milk",
+    "p": 0.5,
+    "c": 6,
+    "f": 1.5,
+    "k": 38,
+    "cat": "Drink \u2014 moderate GI"
+  },
+  {
+    "nz": "Coconut milk drink",
+    "usa": "Coconut milk beverage",
+    "p": 0.2,
+    "c": 1,
+    "f": 2,
+    "k": 22,
+    "cat": "Drink \u2014 dairy-free"
+  },
+  {
+    "nz": "Matcha powder",
+    "usa": "Matcha powder",
+    "p": 30,
+    "c": 39,
+    "f": 5,
+    "k": 324,
+    "cat": "Drink \u2014 L-theanine \u2605"
+  },
+  {
+    "nz": "Chamomile tea",
+    "usa": "Chamomile tea",
+    "p": 0,
+    "c": 0.2,
+    "f": 0,
+    "k": 1,
+    "cat": "Drink \u2014 cortisol descent \u2605"
+  },
+  {
+    "nz": "Passionflower tea",
+    "usa": "Passionflower tea",
+    "p": 0,
+    "c": 0.1,
+    "f": 0,
+    "k": 1,
+    "cat": "Drink \u2014 evening support"
+  },
+  {
+    "nz": "Creatine monohydrate",
+    "usa": "Creatine monohydrate",
+    "p": 0,
+    "c": 0,
+    "f": 0,
+    "k": 0,
+    "cat": "Supplement \u2014 5g daily"
+  },
+  {
+    "nz": "Tailwind per serve",
+    "usa": "Tailwind per serve",
+    "p": 0,
+    "c": 25,
+    "f": 0,
+    "k": 100,
+    "cat": "Electrolyte \u2014 strength days"
+  }
+]
