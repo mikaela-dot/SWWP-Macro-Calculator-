@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-kale: #3B4A3F;
+  --color-sage: #8FA68A;
+  --color-cinnamon: #B87352;
+  --color-coconut: #F5F0E8;
+  --color-daydream: #C9D4C0;
+}
+
+body {
+  background-color: #F5F0E8;
+  color: #3B4A3F;
+  font-family: var(--font-sans);
+  font-weight: 300;
+}

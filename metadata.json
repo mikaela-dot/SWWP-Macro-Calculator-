@@ -1,0 +1,6 @@
+{
+  "name": "M Deats Active",
+  "description": "A research-backed female-specific macro and energy availability tracker synced with menstrual cycles, designed for active women with a spotlight on perimenopause health under MD Eats Wellness.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
