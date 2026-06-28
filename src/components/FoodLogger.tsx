@@ -1237,7 +1237,7 @@ export default function FoodLogger({
       </div>
 
       {/* Primary Input Mode Navigation */}
-      <div className="flex flex-wrap gap-4 border-b border-daydream pb-0.5" id="fuel-registry-tabs">
+      <div className="flex gap-4 border-b border-daydream pb-0.5 overflow-x-auto scrollbar-hide" id="fuel-registry-tabs" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
         <button
           onClick={() => setActiveInputTab('manual')}
           className={`pb-2.5 text-sm font-mono uppercase tracking-[0.15em] outline-none transition-all duration-150 flex items-center gap-1.5 ${
@@ -1247,7 +1247,7 @@ export default function FoodLogger({
           }`}
         >
           <Scale className="h-3 w-3" />
-          Meal Split & Manual Entry
+          Meal Split
         </button>
         <button
           onClick={() => setActiveInputTab('scanner')}
@@ -1258,7 +1258,7 @@ export default function FoodLogger({
           }`}
         >
           <Camera className="h-3 w-3" />
-          Barcode & Camera Scanner
+          Scanner
         </button>
         <button
           onClick={() => setActiveInputTab('ai')}
@@ -1269,7 +1269,7 @@ export default function FoodLogger({
           }`}
         >
           <Sparkles className="h-3 w-3" />
-          Smart AI Natural Text
+          AI Parser
         </button>
         <button
           onClick={() => setActiveInputTab('recipe')}
@@ -1280,7 +1280,7 @@ export default function FoodLogger({
           }`}
         >
           <ChefHat className="h-3 w-3" />
-          Recipe Parser
+          Recipe
         </button>
       </div>
 
