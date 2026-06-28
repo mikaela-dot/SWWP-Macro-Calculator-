@@ -457,7 +457,7 @@ export default function FoodLogger({
 }: FoodLoggerProps) {
   
   // UI Tabs
-  const [activeInputTab, setActiveInputTab] = useState<'ai' | 'manual' | 'scanner'>('manual');
+  const [activeInputTab, setActiveInputTab] = useState<'ai' | 'manual' | 'scanner' | 'recipe'>('manual');
   
   // Smart Raw Manual Calculator Inputs
   const [proteinPresetId, setProteinPresetId] = useState(RAW_PROTEIN_PRESETS[0].id);
@@ -488,6 +488,13 @@ export default function FoodLogger({
   const [aiLoading, setAiLoading] = useState(false);
   const [aiError, setAiError] = useState('');
   const [aiPreview, setAiPreview] = useState<any>(null);
+  // Recipe parser states
+  const [recipeText, setRecipeText] = useState('');
+  const [recipeServings, setRecipeServings] = useState<string>('4');
+  const [recipeServingNumber, setRecipeServingNumber] = useState<string>('1');
+  const [recipeLoading, setRecipeLoading] = useState(false);
+  const [recipeError, setRecipeError] = useState('');
+  const [recipePreview, setRecipePreview] = useState<any>(null);
 
   // General Scanner view tabs (barcode scanner is now the clean default)
   const [scanTab, setScanTab] = useState<'barcode' | 'camera'>('barcode');
@@ -835,6 +842,38 @@ export default function FoodLogger({
     setManualCalcium('');
     setManualFibre('');
     setManualSodium('');
+  };
+
+  // Recipe parser
+  const handleParseRecipe = async () => {
+    if (!recipeText.trim()) return;
+    setRecipeLoading(true);
+    setRecipeError('');
+    setRecipePreview(null);
+
+    try {
+      const response = await fetch('/api/gemini/parse-recipe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          recipeText: recipeText.trim(),
+          servings: Number(recipeServings) || 4,
+          servingNumber: Number(recipeServingNumber) || 1
+        })
+      });
+
+      if (!response.ok) {
+        const err = await response.json();
+        throw new Error(err.error || 'Recipe parser unavailable.');
+      }
+
+      const data = await response.json();
+      setRecipePreview(data);
+    } catch (err: any) {
+      setRecipeError(err.message || 'Recipe parser unavailable — please try again.');
+    } finally {
+      setRecipeLoading(false);
+    }
   };
 
   // AI NLP meal ingestion
@@ -1231,6 +1270,17 @@ export default function FoodLogger({
         >
           <Sparkles className="h-3 w-3" />
           Smart AI Natural Text
+        </button>
+        <button
+          onClick={() => setActiveInputTab('recipe')}
+          className={`pb-2.5 text-sm font-mono uppercase tracking-[0.15em] outline-none transition-all duration-150 flex items-center gap-1.5 ${
+            activeInputTab === 'recipe'
+              ? 'border-b-2 border-kale text-kale font-extrabold'
+              : 'text-kale/50 hover:text-kale'
+          }`}
+        >
+          <ChefHat className="h-3 w-3" />
+          Recipe Parser
         </button>
       </div>
 
@@ -2257,6 +2307,160 @@ export default function FoodLogger({
             <span className="text-sm text-kale/60 font-mono">
               ✦ Note: The parser adjusts macro allocation and micronutrient models automatically with simulated female hormone-mediated metabolic shifts.
             </span>
+          </div>
+        )}
+
+        {activeInputTab === 'recipe' && (
+          <div className="space-y-5 animate-fade-in">
+            <div className="bg-[#FAF7F2]/60 border border-daydream/80 rounded-2xl p-5 space-y-4">
+              <div>
+                <span className="text-sm font-mono font-bold text-kale uppercase tracking-wider flex items-center gap-1.5">
+                  <ChefHat className="h-3.5 w-3.5 text-cinnamon" /> Recipe Parser
+                </span>
+                <p className="text-sm text-kale/55 font-sans mt-1">
+                  Paste any recipe — ingredients list or full recipe text. AI calculates nutrition per serving using USDA food data.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex flex-col gap-1">
+                  <label className="text-xs font-mono font-bold text-kale/60 uppercase tracking-widest">Recipe makes (servings)</label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="50"
+                    value={recipeServings}
+                    onChange={(e) => setRecipeServings(e.target.value)}
+                    className="text-sm font-mono font-bold border border-daydream rounded-xl p-2.5 bg-coconut text-kale focus:border-sage focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    placeholder="4"
+                  />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <label className="text-xs font-mono font-bold text-kale/60 uppercase tracking-widest">I am eating (servings)</label>
+                  <input
+                    type="number"
+                    min="0.25"
+                    max="10"
+                    step="0.25"
+                    value={recipeServingNumber}
+                    onChange={(e) => setRecipeServingNumber(e.target.value)}
+                    className="text-sm font-mono font-bold border border-daydream rounded-xl p-2.5 bg-coconut text-kale focus:border-sage focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    placeholder="1"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-mono font-bold text-kale/60 uppercase tracking-widest">Paste your recipe here</label>
+                <textarea
+                  value={recipeText}
+                  onChange={(e) => setRecipeText(e.target.value)}
+                  placeholder={"Example:\nChicken & Vegetable Stir Fry\n- 500g chicken breast\n- 200g broccoli\n- 150g red capsicum\n- 2 tbsp coconut oil\n- 100g brown rice (dry)\n- 2 tbsp soy sauce"}
+                  rows={8}
+                  className="text-sm font-sans border border-daydream rounded-xl p-3 bg-coconut text-kale focus:border-sage focus:outline-none resize-none leading-relaxed"
+                />
+              </div>
+
+              <button
+                type="button"
+                onClick={handleParseRecipe}
+                disabled={recipeLoading || !recipeText.trim()}
+                className="w-full bg-kale text-coconut rounded-xl py-3 text-sm font-mono font-bold uppercase tracking-widest hover:bg-sage transition flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                {recipeLoading ? (
+                  <><Loader2 className="h-4 w-4 animate-spin" /> Parsing recipe...</>
+                ) : (
+                  <><Sparkles className="h-4 w-4" /> Parse Recipe</>
+                )}
+              </button>
+
+              {recipeError && (
+                <p className="text-sm text-rose-600 font-semibold bg-rose-50 px-3.5 py-2 rounded-xl border border-rose-100">
+                  ⚠ {recipeError}
+                </p>
+              )}
+            </div>
+
+            {recipePreview && (
+              <div className="bg-[#EEF4EC] border border-sage/30 rounded-2xl p-5 space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-mono font-bold text-sage uppercase tracking-wider">Recipe Parsed — Does this look right?</span>
+                  <button type="button" onClick={() => setRecipePreview(null)} className="text-kale/40 hover:text-kale text-xl leading-none">×</button>
+                </div>
+
+                <div>
+                  <p className="font-serif italic text-kale font-bold text-base">{recipePreview.name}</p>
+                  <p className="text-xs font-mono text-kale/50 mt-0.5">{recipePreview.servingDescription}</p>
+                </div>
+
+                <div className="grid grid-cols-5 gap-2 text-center">
+                  {[
+                    { label: 'kcal', val: recipePreview.calories, color: 'text-kale' },
+                    { label: 'protein', val: `${recipePreview.protein}g`, color: 'text-cinnamon' },
+                    { label: 'carbs', val: `${recipePreview.carbs}g`, color: 'text-sage' },
+                    { label: 'fat', val: `${recipePreview.fat}g`, color: 'text-[#9A3B26]' },
+                    { label: 'fibre', val: `${recipePreview.fibreG || 0}g`, color: 'text-sage' },
+                  ].map((item) => (
+                    <div key={item.label} className="bg-coconut rounded-xl p-2">
+                      <div className="text-[10px] text-kale/50 font-mono uppercase">{item.label}</div>
+                      <div className={`font-bold font-mono text-sm ${item.color}`}>{item.val}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {recipePreview.ingredients && recipePreview.ingredients.length > 0 && (
+                  <div>
+                    <p className="text-xs font-mono text-kale/50 uppercase tracking-wider mb-1.5">Ingredients recognised</p>
+                    <div className="space-y-1">
+                      {recipePreview.ingredients.map((ing: string, i: number) => (
+                        <p key={i} className="text-xs font-sans text-kale/70">✦ {ing}</p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <p className="text-xs text-kale/50 font-sans italic">
+                  AI estimates are ±15–20% accurate. If values look wrong, adjust your recipe description and try again.
+                </p>
+
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onAddFood({
+                        id: 'f_recipe_' + Date.now(),
+                        name: recipePreview.name,
+                        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                        calories: recipePreview.calories,
+                        protein: recipePreview.protein,
+                        carbs: recipePreview.carbs,
+                        fat: recipePreview.fat,
+                        fibreG: recipePreview.fibreG || undefined,
+                        ironMg: recipePreview.ironMg || undefined,
+                        calciumMg: recipePreview.calciumMg || undefined,
+                        sodiumMg: recipePreview.sodiumMg || undefined,
+                      });
+                      setRecipePreview(null);
+                      setRecipeText('');
+                    }}
+                    className="flex-1 bg-kale text-coconut rounded-xl py-2.5 text-sm font-mono font-bold uppercase tracking-wider hover:bg-sage transition"
+                  >
+                    ✓ Confirm & Log
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setRecipePreview(null)}
+                    className="px-4 bg-coconut border border-daydream text-kale/60 rounded-xl py-2.5 text-sm font-mono hover:text-kale transition"
+                  >
+                    Dismiss
+                  </button>
+                </div>
+              </div>
+            )}
+
+            <p className="text-xs text-kale/45 font-sans italic">
+              ✦ Works with any recipe format — ingredient lists, full recipes, or just a rough description. Include quantities and units for best accuracy.
+            </p>
           </div>
         )}
 
