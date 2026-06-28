@@ -25,7 +25,7 @@ Rules:
 {"name":"food name","calories":0,"carbs":0,"protein":0,"fat":0,"ironMg":0,"calciumMg":0,"sodiumMg":0,"fibreG":0}`;
 
   try {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${apiKey}`;
     
     const r = await fetch(url, {
       method: "POST",
